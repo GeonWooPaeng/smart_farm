@@ -1,0 +1,32 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['date', '온도', '습도','토양 습도',"조도"],
+          ['2019-01-19',  22,    80, 22, 24],
+          ['2019-01-20',  34,    90,24, 55],
+          ['2019-01-21',  56,    45,24, 50],
+        ]);
+
+        var options = {
+          title: 'SMART FARM',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 600px; height: 300px"></div>
+  </body>
+</html>

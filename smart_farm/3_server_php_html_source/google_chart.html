@@ -1,0 +1,32 @@
+<html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Date', 'temperature', 'humidity'],
+            ['2019.08.31',  24,      40],
+            ['2019.08.30',  27,      54],
+            ['2019.08.29',  30,      24],
+            ['2019.08.28',  22,      33]
+          ]);
+  
+          var options = {
+            title: 'smart_farm',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+          };
+  
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+  
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <div id="curve_chart" style="width: 450px; height: 450px"></div>
+    </body>
+  </html>
