@@ -534,8 +534,8 @@
               *  아날로그 값을 100(백분율)로 바꾸는 작업. 
               */
 
-              Serial.println("\n\n====== Environment bluetooth show ======\n\n");
-              get_sensor_value();
+//              Serial.println("\n\n====== Environment bluetooth show ======\n\n");
+//              get_sensor_value();
 
              
              /* 블루투스로 값 보여주기 */ 
