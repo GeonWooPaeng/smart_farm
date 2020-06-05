@@ -13,3 +13,7 @@ aws is already finished
 so if you do this 
 make aws sever 
 and check the ip  
+
+
+
+smart_farm 
